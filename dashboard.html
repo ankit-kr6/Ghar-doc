@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghar Doctor - Patient Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="logo" style="color: white; margin-bottom: 2rem;">
+                <i class="fa-solid fa-heart-pulse"></i> Ghar Doctor
+            </div>
+            <nav style="display: block; background: transparent; padding: 0; box-shadow: none;">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" class="active">Live Dashboard</a>
+                <a href="#">Patient Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <main class="dash-content">
+            <h2 class="mb-2">Patient Monitor: Sayan Mondal</h2>
+
+            <div style="margin-bottom: 2rem;">
+                <span style="color: var(--text-light);">Connection Status: </span>
+                <span class="status-badge status-normal"><i class="fa-solid fa-wifi"></i> Live Data Incoming</span>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Body Temperature</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="stat-value">37.2</span>
+                        <span class="stat-unit">°C</span>
+                    </div>
+                    <span class="status-badge status-normal">Normal</span>
+                </div>
+
+                <div class="card">
+                    <h3>Heart Rate</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="stat-value">72</span>
+                        <span class="stat-unit">BPM</span>
+                        <i class="fa-solid fa-heart" style="color: #e74c3c; animation: pulse 1s infinite;"></i>
+                    </div>
+                    <span class="status-badge status-normal">Resting</span>
+                </div>
+
+                <div class="card" style="border-top-color: #FDE8E8;">
+                    <h3>Recent Alerts</h3>
+                    <ul style="list-style: none; margin-top: 1rem; color: var(--text-light);">
+                        <li style="margin-bottom: 0.5rem;">• 10:00 AM - System Start</li>
+                        <li>• 10:05 AM - Sync Complete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; height: 300px; display: flex; align-items: center; justify-content: center; background: #fafafa;">
+                <p style="color: var(--text-light);">[ Live Heart Rate Graph Rendering Area ]</p>
+                </div>
+        </main>
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+
+</body>
+</html>
