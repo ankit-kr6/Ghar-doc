@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ghar Doctor | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            max-width: 95%;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(15px);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            animation: fade 0.8s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .brand {
+            flex: 1;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .brand h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand span {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .form-box {
+            flex: 1;
+            padding: 50px 40px;
+        }
+
+        .form-box h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .form-box p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            margin-top: 6px;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 114, 255, 0.5);
+        }
+
+        .switch {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .switch a {
+            color: #00c6ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media(max-width:800px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .brand {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="loader">
+        <div class="spinner"></div>
+    </div> -->
+
+    <div class="container">
+
+        <div class="brand">
+            <h1>Ghar Doctor</h1>
+            <span>Smart Healthcare Dashboard</span>
+        </div>
+
+        <div class="form-box">
+            <h2>Login</h2>
+            <p>Access your dashboard</p>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter email">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+            </div>
+
+            <button class="btn" onclick="login()">Login</button>
+
+            <div class="switch">
+                Don’t have an account? <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function login() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
